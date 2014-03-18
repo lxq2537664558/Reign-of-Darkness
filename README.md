@@ -248,20 +248,28 @@ Compiling on Windows:
 	- Make sure the configuration is as follows
 	  (note that the versions may differ for you):
 	-----------------
-	BUILD_CLIENT             [X]
-	BUILD_SERVER             [ ]
-	CMAKE_BUILD_TYPE         Release
-	CMAKE_INSTALL_PREFIX     DIR/minetest-install
-	IRRLICHT_SOURCE_DIR      DIR/irrlicht-1.7.1
-	RUN_IN_PLACE             [X]
-	WARN_ALL                 [ ]
-	ZLIB_DLL                 DIR/zlib125dll/dll32/zlibwapi.dll
-	ZLIB_INCLUDE_DIR         DIR/zlib-1.2.5
-	ZLIB_LIBRARIES           DIR/zlib125dll/dll32/zlibwapi.lib
-	GETTEXT_BIN_DIR          DIR/gettext/bin
-	GETTEXT_INCLUDE_DIR      DIR/gettext/include
-	GETTEXT_LIBRARIES        DIR/gettext/lib/intl.lib
-	GETTEXT_MSGFMT           DIR/gettext/bin/msgfmt
+	  BUILD_CLIENT                         [X]
+	  BUILD_SERVER                       [  ]
+	  CMAKE_BUILD_TYPE             Release
+	  CMAKE_INSTALL_PREFIX     DIR/minetest-install
+	  IRRLICHT_SOURCE_DIR       DIR/irrlicht-1.7.1
+	  RUN_IN_PLACE                        [X]
+	  WARN_ALL                                 [  ]
+	  ZLIB_DLL                                    DIR/zlib125dll/dll32/zlibwapi.dll
+	  ZLIB_INCLUDE_DIR                 DIR/zlib-1.2.5
+	  ZLIB_LIBRARIES                       DIR/zlib125dll/dll32/zlibwapi.lib
+ 	  LIBVORBIS_INCLUDE_DIR    DIR/libvorbis-1.3.3/include
+	  LIBVORBIS_LIBRARIES           DIR/libvorbis.dll
+          LIBVORBISFILE_INCLUDE_DIR    DIR/libvorbis-1.3.3/include
+          LIBVORBISFILE_LIBRARIES           DIR/libvorbisfile.dll
+          LIBOGG_INCLUDE_DIR          DIR/libogg-1.3.0/include
+          LIBOGG_LIBRARIES                DIR/libogg.dll
+	  GETTEXT_BIN_DIR                  DIR/gettext/bin
+	  GETTEXT_INCLUDE_DIR       DIR/gettext/include
+	  GETTEXT_LIBRARIES             DIR/gettext/lib/intl.lib
+	  GETTEXT_MSGFMT                 DIR/gettext/bin/msgfmt
+          OPENAL_INCLUDE_DIR=C:\Program Files (x86)\OpenAL\include
+          OPENAL_LIBRARIES=C:\Program Files (x86)\OpenAL\lib\OpenAL32.lib
 	-----------------
 	- Hit "Configure"
 	- Hit "Configure" once again 8)
