@@ -96,102 +96,100 @@ CMake options
 -------------
 General options:
 
-BUILD_CLIENT        - Build MechCraft client
-BUILD_SERVER        - Build MechCraft server
-CMAKE_BUILD_TYPE    - Type of build (Release vs. Debug)
-    Release         - Release build
-    Debug           - Debug build
-    RelWithDebInfo  - Release build with Debug information
-    MinSizeRel      - Release build with -Os passed to compiler to make executable as small as possible
-ENABLE_CURL         - Build with cURL; Enables use of online mod repo, public serverlist and remote media fetching via http
-ENABLE_FREETYPE     - Build with Freetype2; Allows using TTF fonts
-ENABLE_GETTEXT      - Build with Gettext; Allows using translations
-ENABLE_GLES         - Search for Open GLES headers & libraries and use them
-ENABLE_LEVELDB      - Build with LevelDB; Enables use of LevelDB, which is much faster than SQLite, as map backend
-ENABLE_SOUND        - Build with OpenAL, libogg & libvorbis; in-game Sounds
-DISABLE_LUAJIT      - Do not search for LuaJIT headers & library
-RUN_IN_PLACE        - Create a portable install (worlds, settings etc. in current directory)
-USE_GPROF           - Enable profiling using GProf
-VERSION_EXTRA       - Text to append to version (e.g. VERSION_EXTRA=foobar -> Minetest 0.4.9-foobar)
+BUILD_CLIENT        - Build MechCraft client<br/>
+BUILD_SERVER        - Build MechCraft server<br/>
+CMAKE_BUILD_TYPE    - Type of build (Release vs. Debug)<br/>
+    Release         - Release build<br/>
+    Debug           - Debug build<br/>
+    RelWithDebInfo  - Release build with Debug information<br/>
+    MinSizeRel      - Release build with -Os passed to compiler to make executable as small as possible<br/>
+ENABLE_CURL         - Build with cURL; Enables use of online mod repo, public serverlist and remote media fetching via http<br/>
+ENABLE_FREETYPE     - Build with Freetype2; Allows using TTF fonts<br/>
+ENABLE_GETTEXT      - Build with Gettext; Allows using translations<br/>
+ENABLE_GLES         - Search for Open GLES headers & libraries and use them<br/>
+ENABLE_LEVELDB      - Build with LevelDB; Enables use of LevelDB, which is much faster than SQLite, as map backend<br/>
+ENABLE_SOUND        - Build with OpenAL, libogg & libvorbis; in-game Sounds<br/>
+DISABLE_LUAJIT      - Do not search for LuaJIT headers & library<br/>
+RUN_IN_PLACE        - Create a portable install (worlds, settings etc. in current directory)<br/>
+USE_GPROF           - Enable profiling using GProf<br/>
+VERSION_EXTRA       - Text to append to version (e.g. VERSION_EXTRA=foobar -> Minetest 0.4.9-foobar)<br/>
 
-Library specific options:
+Library specific options:<br/>
 
-BZIP2_INCLUDE_DIR               - Linux only; directory where bzlib.h is located
-BZIP2_LIBRARY                   - Linux only; path to libbz2.a/libbz2.so
-CURL_DLL                        - Only if building with cURL on Windows; path to libcurl.dll
-CURL_INCLUDE_DIR                - Only if building with cURL; directory where curl.h is located
-CURL_LIBRARY                    - Only if building with cURL; path to libcurl.a/libcurl.so/libcurl.lib
-EGL_INCLUDE_DIR                 - Only if building with GLES; directory that contains egl.h
-EGL_egl_LIBRARY                 - Only if building with GLES; path to libEGL.a/libEGL.so
-FREETYPE_INCLUDE_DIR_freetype2  - Only if building with Freetype2; directory that contains an freetype directory with files such as ftimage.h in it
-FREETYPE_INCLUDE_DIR_ft2build   - Only if building with Freetype2; directory that contains ft2build.h
-FREETYPE_LIBRARY                - Only if building with Freetype2; path to libfreetype.a/libfreetype.so/freetype.lib
-GETTEXT_DLL                     - Only when building with Gettext on Windows; path to libintl3.dll
-GETTEXT_ICONV_DLL               - Only when building with Gettext on Windows; path to libiconv2.dll
-GETTEXT_INCLUDE_DIR             - Only when building with Gettext; directory that contains iconv.h
-GETTEXT_LIBRARY                 - Only when building with Gettext on Windows; path to libintl.dll.a
-GETTEXT_MSGFMT                  - Only when building with Gettext; path to msgfmt/msgfmt.exe
-IRRLICHT_DLL                    - path to Irrlicht.dll
-IRRLICHT_INCLUDE_DIR            - directory that contains IrrCompileConfig.h
-IRRLICHT_LIBRARY                - path to libIrrlicht.a/libIrrlicht.so/libIrrlicht.dll.a
-LEVELDB_INCLUDE_DIR             - Only when building with LevelDB; directory that contains db.h
-LEVELDB_LIBRARY                 - Only when building with LevelDB; path to libleveldb.a/libleveldb.so/libleveldb.dll
-LUA_INCLUDE_DIR                 - Only if you want to use LuaJIT; directory where luajit.h is located
-LUA_LIBRARY                     - Only if you want to use LuaJIT; path to libluajit.a/libluajit.so
-MINGWM10_DLL                    - Only if compiling with MinGW; path to mingwm10.dll
-OGG_DLL                         - Only if building with sound on Windows; path to libogg.dll
-OGG_INCLUDE_DIR                 - Only if building with sound; directory that contains an ogg directory which contains ogg.h
-OGG_LIBRARY                     - Only if building with sound; path to libogg.a/libogg.so/libogg.dll.a
-OPENAL_DLL                      - Only if building with sound on Windows; path to OpenAL32.dll
-OPENAL_INCLUDE_DIR              - Only if building with sound; directory where al.h is located
-OPENAL_LIBRARY                  - Only if building with sound; path to libopenal.a/libopenal.so/OpenAL32.lib
-OPENGLES2_INCLUDE_DIR           - Only if building with GLES; directory that contains gl2.h
-OPENGLES2_gl_LIBRARY            - Only if building with GLES; path to libGLESv2.a/libGLESv2.so
-SQLITE3_INCLUDE_DIR             - Only if you want to use SQLite from your OS; directory that contains sqlite3.h
-SQLITE3_LIBRARY                 - Only if you want to use the SQLite from your OS; path to libsqlite3.a/libsqlite3.so
-VORBISFILE_DLL                  - Only if building with sound on Windows; path to libvorbisfile-3.dll
-VORBISFILE_LIBRARY              - Only if building with sound; path to libvorbisfile.a/libvorbisfile.so/libvorbisfile.dll.a
-VORBIS_DLL                      - Only if building with sound on Windows; path to libvorbis-0.dll
-VORBIS_INCLUDE_DIR              - Only if building with sound; directory that contains a directory vorbis with vorbisenc.h inside
-VORBIS_LIBRARY                  - Only if building with sound; path to libvorbis.a/libvorbis.so/libvorbis.dll.a
-XXF86VM_LIBRARY                 - Only on Linux; path to libXXf86vm.a/libXXf86vm.so
-ZLIB_DLL                        - Only on Windows; path to zlibwapi.dll
-ZLIB_INCLUDE_DIR                - directory where zlib.h is located
-ZLIB_LIBRARY                    - path to libz.a/libz.so/zlibwapi.lib
-
-Compiling on Windows:
+BZIP2_INCLUDE_DIR               - Linux only; directory where bzlib.h is located<br/>
+BZIP2_LIBRARY                   - Linux only; path to libbz2.a/libbz2.so<br/>
+CURL_DLL                        - Only if building with cURL on Windows; path to libcurl.dll<br/>
+CURL_INCLUDE_DIR                - Only if building with cURL; directory where curl.h is located<br/>
+CURL_LIBRARY                    - Only if building with cURL; path to libcurl.a/libcurl.so/libcurl.lib<br/>
+EGL_INCLUDE_DIR                 - Only if building with GLES; directory that contains egl.h<br/>
+EGL_egl_LIBRARY                 - Only if building with GLES; path to libEGL.a/libEGL.so<br/>
+FREETYPE_INCLUDE_DIR_freetype2  - Only if building with Freetype2; directory that contains an freetype directory with files such as ftimage.h in it<br/>
+FREETYPE_INCLUDE_DIR_ft2build   - Only if building with Freetype2; directory that contains ft2build.h<br/>
+FREETYPE_LIBRARY                - Only if building with Freetype2; path to libfreetype.a/libfreetype.so/freetype.lib<br/>
+GETTEXT_DLL                     - Only when building with Gettext on Windows; path to libintl3.dll<br/>
+GETTEXT_ICONV_DLL               - Only when building with Gettext on Windows; path to libiconv2.dll<br/><br/>
+GETTEXT_INCLUDE_DIR             - Only when building with Gettext; directory that contains iconv.h<br/>
+GETTEXT_LIBRARY                 - Only when building with Gettext on Windows; path to libintl.dll.a<br/>
+GETTEXT_MSGFMT                  - Only when building with Gettext; path to msgfmt/msgfmt.exe<br/>
+IRRLICHT_DLL                    - path to Irrlicht.dll<br/>
+IRRLICHT_INCLUDE_DIR            - directory that contains IrrCompileConfig.h<br/>
+IRRLICHT_LIBRARY                - path to libIrrlicht.a/libIrrlicht.so/libIrrlicht.dll.a<br/>
+LEVELDB_INCLUDE_DIR             - Only when building with LevelDB; directory that contains db.h<br/>
+LEVELDB_LIBRARY                 - Only when building with LevelDB; path to libleveldb.a/libleveldb.so/libleveldb.dll<br/>
+LUA_INCLUDE_DIR                 - Only if you want to use LuaJIT; directory where luajit.h is located<br/>
+LUA_LIBRARY                     - Only if you want to use LuaJIT; path to libluajit.a/libluajit.so<br/>
+MINGWM10_DLL                    - Only if compiling with MinGW; path to mingwm10.dll<br/>
+OGG_DLL                         - Only if building with sound on Windows; path to libogg.dll<br/>
+OGG_INCLUDE_DIR                 - Only if building with sound; directory that contains an ogg directory which contains ogg.h<br/>
+OGG_LIBRARY                     - Only if building with sound; path to libogg.a/libogg.so/libogg.dll.a<br/>
+OPENAL_DLL                      - Only if building with sound on Windows; path to OpenAL32.dll<br/>
+OPENAL_INCLUDE_DIR              - Only if building with sound; directory where al.h is located<br/>
+OPENAL_LIBRARY                  - Only if building with sound; path to libopenal.a/libopenal.so/OpenAL32.lib<br/>
+OPENGLES2_INCLUDE_DIR           - Only if building with GLES; directory that contains gl2.h<br/>
+OPENGLES2_gl_LIBRARY            - Only if building with GLES; path to libGLESv2.a/libGLESv2.so<br/>
+SQLITE3_INCLUDE_DIR             - Only if you want to use SQLite from your OS; directory that contains sqlite3.h<br/>
+SQLITE3_LIBRARY                 - Only if you want to use the SQLite from your OS; path to libsqlite3.a/libsqlite3.so<br/>
+VORBISFILE_DLL                  - Only if building with sound on Windows; path to libvorbisfile-3.dll<br/>
+VORBISFILE_LIBRARY              - Only if building with sound; path to libvorbisfile.a/libvorbisfile.so/libvorbisfile.dll.a<br/>
+VORBIS_DLL                      - Only if building with sound on Windows; path to libvorbis-0.dll<br/>
+VORBIS_INCLUDE_DIR              - Only if building with sound; directory that contains a directory vorbis with vorbisenc.h inside<br/>
+VORBIS_LIBRARY                  - Only if building with sound; path to libvorbis.a/libvorbis.so/libvorbis.dll.a<br/>
+XXF86VM_LIBRARY                 - Only on Linux; path to libXXf86vm.a/libXXf86vm.so<br/>
+ZLIB_DLL                        - Only on Windows; path to zlibwapi.dll<br/>
+ZLIB_INCLUDE_DIR                - directory where zlib.h is located<br/>
+ZLIB_LIBRARY                    - path to libz.a/libz.so/zlibwapi.lib<br/>
+<br/>
+Compiling on Windows:<br/>
 ---------------------
-- This section is outdated. In addition to what is described here:
-  - In addition to minetest, you need to download minetest_game.
-  - If you wish to have sound support, you need libogg, libvorbis and libopenal
+- This section is outdated and I can't get it to work. If you do, please tell me :)<br/>
 
-- You need:
-	* CMake:
-		http://www.cmake.org/cmake/resources/software.html
-	* MinGW or Visual Studio
-		http://www.mingw.org/
-		http://msdn.microsoft.com/en-us/vstudio/default
-	* Irrlicht SDK 1.7:
-		http://irrlicht.sourceforge.net/downloads.html
-	* Zlib headers (zlib125.zip)
-		http://www.winimage.com/zLibDll/index.html
-	* Zlib library (zlibwapi.lib and zlibwapi.dll from zlib125dll.zip):
-		http://www.winimage.com/zLibDll/index.html
-	* Optional: gettext library and tools:
-		http://gnuwin32.sourceforge.net/downlinks/gettext.php
-		- This is used for other UI languages. Feel free to leave it out.
-	* Libvorbis 1.3.3
-                DLL=http://www.dll-files.com/dllindex/dll-files.shtml?libvorbis
-                INCLUDE=http://xiph.org/downloads/[/url]
-	*Libvorbisfile
-                DLL=http://www.dll-files.com/dllindex/dll-files.shtml?libvorbisfile
-                INCLUDE=libvorbis/include
-	*Libogg
-                INCLUDE=http://xiph.org/downloads/
-                DLL= http://www.dlldump.com/download-dll-files_new.php/dllfiles/L/libogg.dll
-	* And, of course, MechCraft:
-		https://github.com/MechCraft-Team/MechCraft
-- Steps:
+- You need:<br/>
+	* CMake:<br/>
+		http://www.cmake.org/cmake/resources/software.html<br/>
+	* MinGW or Visual Studio<br/>
+		http://www.mingw.org/<br/>
+		http://msdn.microsoft.com/en-us/vstudio/default<br/>
+	* Irrlicht SDK 1.7:<br/>
+		http://irrlicht.sourceforge.net/downloads.html<br/>
+	* Zlib headers (zlib125.zip)<br/>
+		http://www.winimage.com/zLibDll/index.html<br/>
+	* Zlib library (zlibwapi.lib and zlibwapi.dll from zlib125dll.zip):<br/>
+		http://www.winimage.com/zLibDll/index.html<br/>
+	* Optional: gettext library and tools:<br/>
+		http://gnuwin32.sourceforge.net/downlinks/gettext.php<br/>
+		- This is used for other UI languages. Feel free to leave it out.<br/>
+	* Libvorbis 1.3.3<br/>
+                DLL=http://www.dll-files.com/dllindex/dll-files.shtml?libvorbis<br/>
+                INCLUDE=http://xiph.org/downloads/<br/>
+	*Libvorbisfile<br/>
+                DLL=http://www.dll-files.com/dllindex/dll-files.shtml?libvorbisfile<br/>
+                INCLUDE=libvorbis/include<br/>
+	*Libogg<br/>
+                INCLUDE=http://xiph.org/downloads/<br/>
+                DLL= http://www.dlldump.com/download-dll-files_new.php/dllfiles/L/libogg.dll<br/>
+	* And, of course, MechCraft:<br/>
+		https://github.com/MechCraft-Team/MechCraft<br/>
+- Steps:<br/>
 	- Select a directory called DIR hereafter in which you will operate.
 	- Make sure you have CMake and a compiler installed.
 	- Download all the other stuff to DIR and extract them into there.
