@@ -13,6 +13,8 @@ This game is not finished!
 - Don't expect it to work as well as a finished game will.
 - Please report any bugs. When doing that, debug.txt is useful.
 
+Temporary Logo by: http://www.visualpharm.com
+
 Default Controls
 -----------------
 - WASD: move
