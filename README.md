@@ -3,6 +3,7 @@ MechCraft
 
 An InfiniMiner/Minecraft inspired game.
 Created by Conno123009
+http://mechcraft.sourceforge.net
 
 Based off Minetest:
 Copyright (c) 2010-2013 Perttu Ahola <celeron55@gmail.com>
