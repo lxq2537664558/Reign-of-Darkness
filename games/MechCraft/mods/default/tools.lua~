@@ -229,6 +229,18 @@ minetest.register_tool("default:axe_bronze", {
 		damage_groups = {fleshy=4},
 	},
 })
+minetest.register_tool("default:axe_mese", {
+	description = "Mese Axe",
+	inventory_image = "default_tool_meseaxe.png",
+	tool_capabilities = {
+		full_punch_interval = 0.9,
+		max_drop_level=1,
+		groupcaps={
+			choppy={times={[1]=2.20, [2]=1.00, [3]=0.60}, uses=20, maxlevel=3},
+		},
+		damage_groups = {fleshy=6},
+	},
+})
 minetest.register_tool("default:axe_diamond", {
 	description = "Diamond Axe",
 	inventory_image = "default_tool_diamondaxe.png",
