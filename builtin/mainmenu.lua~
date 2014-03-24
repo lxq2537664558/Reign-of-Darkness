@@ -316,7 +316,7 @@ end
 
 --------------------------------------------------------------------------------
 function tabbuilder.dialog_create_world()
-	local mapgens = {"v6", "v7", "indev", "singlenode", "math"}
+	local mapgens = {"Default", "v7", "In-dev", "uNode", "Math"}
 
 	local current_seed = engine.setting_get("fixed_map_seed") or ""
 	local current_mg   = engine.setting_get("mg_name")
@@ -1040,9 +1040,9 @@ function tabbuilder.tab_singleplayer()
 				tonumber(engine.setting_get("mainmenu_last_selected_world"))
 				)
 
-	return	"button[4,4.15;2.6,0.5;world_delete;".. fgettext("Delete") .. "]" ..
-			"button[6.5,4.15;2.8,0.5;world_create;".. fgettext("New") .. "]" ..
-			"button[9.2,4.15;2.55,0.5;world_configure;".. fgettext("Configure") .. "]" ..
+	return	"button[4,4.15;3.8.,0.5;world_delete;".. fgettext("Delete") .. "]" ..
+			"button[7.9,4.15;3.8,0.5;world_create;".. fgettext("New") .. "]" ..
+			--"button[9.2,4.15;2.55,0.5;world_configure;".. fgettext("Configure") .. "]" ..
 			"button[8.5,4.95;3.25,0.5;play;".. fgettext("Play") .. "]" ..
 			"label[4,-0.25;".. fgettext("Select World:") .. "]"..
 			"vertlabel[0,-0.25;".. fgettext("SINGLE PLAYER") .. "]" ..
@@ -1102,13 +1102,18 @@ end
 --------------------------------------------------------------------------------
 function tabbuilder.tab_credits()
 	local logofile = menu.defaulttexturedir .. "logo.png"
-	return	"vertlabel[0,-0.5;MECHCRAFT]" ..
-			"label[0.5,2;MechCraft Beta]" ..
-			"label[0.5,2.3;By Conno123009]" ..
+	return	"vertlabel[0,-0.5;ABOUT]" ..
+			"label[0.5,2;Reign of Darkness]" ..
+			"label[0.5,2.3;Developer Preview]" ..
+			"label[0.5,2.6;By Conno123009]" ..
 			"image[0.5,1;" .. engine.formspec_escape(logofile) .. "]" ..
 			"label[3.5,-0.25;8.5,5.8;Based off the game MineTest]" ..
 			"textlist[3.5,-0.25;8.5,5.8;list_credits;" ..
-			"#FFFF00" .. fgettext("MineTest Core Developers") .."," ..
+			"#FFFF00" .. fgettext("Reign of Darkness Developers") .."," ..
+			"Conno123009 <Conno123009@programmer.net>,"..
+			"Jack Fitzpatrick <jackowenfitzpatrick@gmail.com>,"..
+			"Luke Azar <thelazar42@gmail.com>," ..
+			"#FFFF00" .. fgettext("MineTest Current and Past Developers") .."," ..
 			"Perttu Ahola (celeron55) <celeron55@gmail.com>,"..
 			"Ryan Kwolek (kwolekr) <kwolekr@minetest.net>,"..
 			"PilzAdam <pilzadam@minetest.net>," ..
@@ -1122,22 +1127,20 @@ function tabbuilder.tab_credits()
 			"ShadowNinja <shadowninja@minetest.net>,"..
 			"Nathanael Courant (Nore/Novatux) <nore@mesecons.net>,"..
 			"BlockMen,"..
-			","..
-			"#FFFF00" .. fgettext("Active Contributors") .. "," ..
 			"Vanessa Ezekowitz (VanessaE) <vanessaezekowitz@gmail.com>,"..
 			"Jurgen Doser (doserj) <jurgen.doser@gmail.com>,"..
 			"Jeija <jeija@mesecons.net>,"..
 			"MirceaKitsune <mirceakitsune@gmail.com>,"..
 			"dannydark <the_skeleton_of_a_child@yahoo.co.uk>,"..
 			"0gb.us <0gb.us@0gb.us>,"..
-			"," ..
-			"#FFFF00" .. fgettext("Previous Contributors") .. "," ..
 			"Guiseppe Bilotta (Oblomov) <guiseppe.bilotta@gmail.com>,"..
 			"Jonathan Neuschafer <j.neuschaefer@gmx.net>,"..
 			"Nils Dagsson Moskopp (erlehmann) <nils@dieweltistgarnichtso.net>,"..
 			"Constantin Wenger (SpeedProg) <constantin.wenger@googlemail.com>,"..
 			"matttpt <matttpt@gmail.com>,"..
 			"JacobF <queatz@gmail.com>,"..
+			"--,"..
+			"Someone actually read the credits! YEAH!"..
 			";0;true]"
 end
 

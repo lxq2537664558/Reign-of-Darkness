@@ -1014,16 +1014,16 @@ static void show_pause_menu(FormspecFormSource* current_formspec,
 			));
 
 	std::ostringstream os;
-	os<<"Minetest\n";
+	os<<"Reign of Darkness Pre-Alpha\n";
 	os<<minetest_build_info<<"\n";
 	os<<"path_user = "<<wrap_rows(porting::path_user, 20)<<"\n";
 
 	std::string formspec =
 		"size[11,5.5,true]"
 		"button_exit[4,1;3,0.5;btn_continue;"  + wide_to_narrow(wstrgettext("Continue"))     + "]"
-		"button_exit[4,2;3,0.5;btn_sound;"     + wide_to_narrow(wstrgettext("Sound Volume")) + "]"
+		"button_exit[4,2;3,0.5;btn_sound;"     + wide_to_narrow(wstrgettext("Adjust Volume")) + "]"
 		"button_exit[4,3;3,0.5;btn_exit_menu;" + wide_to_narrow(wstrgettext("Exit to Menu")) + "]"
-		"button_exit[4,4;3,0.5;btn_exit_os;"   + wide_to_narrow(wstrgettext("Exit Game"))   + "]"
+		"button_exit[4,4;3,0.5;btn_exit_os;"   + wide_to_narrow(wstrgettext("Quit Game"))   + "]"
 		"textarea[7.5,0.25;3.75,6;;" + control_text + ";]"
 		"textarea[0.4,0.25;3.5,6;;" + os.str() + ";]"
 		;
@@ -1484,7 +1484,7 @@ void the_game(bool &kill, bool random_input, InputHandler *input,
 
 	// First line of debug text
 	gui::IGUIStaticText *guitext = guienv->addStaticText(
-			L"Minetest",
+			L"Reign of Darkness ",
 			core::rect<s32>(5, 5, 795, 5+text_height),
 			false, false);
 	// Second line of debug text
@@ -1616,7 +1616,7 @@ void the_game(bool &kill, bool random_input, InputHandler *input,
 
 	bool use_weather = g_settings->getBool("weather");
 
-	core::stringw str = L"MechCraft [";
+	core::stringw str = L"Reign of Darkness [";
 	str += driver->getName();
 	str += "]";
 	device->setWindowCaption(str.c_str());
@@ -3183,7 +3183,7 @@ void the_game(bool &kill, bool random_input, InputHandler *input,
 
 			std::ostringstream os(std::ios_base::binary);
 			os<<std::fixed
-				<<"Minetest "<<minetest_version_hash
+				<<"Reign of Darknes Pre-Alpha "<<minetest_version_hash
 				<<" FPS = "<<fps
 				<<" (R: range_all="<<draw_control.range_all<<")"
 				<<std::setprecision(0)
@@ -3201,7 +3201,7 @@ void the_game(bool &kill, bool random_input, InputHandler *input,
 		else if(show_hud || show_chat)
 		{
 			std::ostringstream os(std::ios_base::binary);
-			os<<"Minetest "<<minetest_version_hash;
+			os<<"Reign of Darkness "<<minetest_version_hash;
 			guitext->setText(narrow_to_wide(os.str()).c_str());
 			guitext->setVisible(true);
 		}
@@ -3628,7 +3628,7 @@ void the_game(bool &kill, bool random_input, InputHandler *input,
 	{
 		error_message = L"A serialization error occurred:\n"
 				+ narrow_to_wide(e.what()) + L"\n\nThe server is probably "
-				L" running a different version of Minetest or MechCraft.";
+				L" running a different version of Minetest or Reign of Darkness.";
 		errorstream<<wide_to_narrow(error_message)<<std::endl;
 	}
 	catch(ServerError &e) {

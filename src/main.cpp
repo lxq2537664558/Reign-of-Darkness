@@ -836,7 +836,7 @@ int main(int argc, char *argv[])
 #ifdef SERVER
 		dstream<<"minetestserver "<<minetest_version_hash<<std::endl;
 #else
-		dstream<<"Mechcraft "<<minetest_version_hash<<std::endl;
+		dstream<<"Reign of Darkness "<<minetest_version_hash<<std::endl;
 		dstream<<"Using Irrlicht "<<IRRLICHT_SDK_VERSION<<std::endl;
 #endif
 		dstream<<"Build info: "<<minetest_build_info<<std::endl;
@@ -1565,7 +1565,7 @@ int main(int argc, char *argv[])
 	{
 		// Set the window caption
 		wchar_t* text = wgettext("Main Menu");
-		device->setWindowCaption((std::wstring(L"MechCraft [")+text+L"]").c_str());
+		device->setWindowCaption((std::wstring(L"Reign of Darkness [")+text+L"]").c_str());
 		delete[] text;
 
 		// This is used for catching disconnects
