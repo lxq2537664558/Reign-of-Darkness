@@ -1,9 +1,8 @@
-MechCraft
+Reign of Darkness
 ============
 
 An InfiniMiner/Minecraft inspired game.
 Created by Conno123009
-http://mechcraft.sourceforge.net
 
 Based off Minetest:
 Copyright (c) 2010-2013 Perttu Ahola <celeron55@gmail.com>
@@ -73,16 +72,20 @@ Compiling on GNU/Linux:
 -----------------------
 
 Install dependencies. Here's an example for Debian/Ubuntu:
-$ apt-get install build-essential libirrlicht-dev cmake libbz2-dev libpng12-dev libjpeg8-dev libxxf86vm-dev libgl1-mesa-dev libsqlite3-dev libogg-dev libvorbis-dev libopenal-dev libcurl4-gnutls-dev libfreetype6-dev
+$ apt-get install build-essential libirrlicht-dev cmake libbz2-dev libpng12-dev libjpeg8-dev libxxf86vm-dev libgl1-mesa-dev libsqlite3-dev libogg-dev libvorbis-dev libopenal-dev libcurl4-gnutls-dev libfreetype6-dev cmake make gcc bzip libbz2-dev
 
 Download source, extract (this is the URL to the latest of source repository, which might not work at all times):
-$ wget https://github.com/MechCraft-Team/MechCraft/tarball/master -O master.tar.gz
+$ wget https://github.com/Reign-of-Darkness/Reign-of-Darkness/tarball/master -O master.tar.gz
 $ tar xf master.tar.gz
-$ cd minetest-minetest-286edd4 (or similar)
+$ cd Reign-of-Darkness (or whatever)
 
 Build a version that runs directly from the source directory:
 $ cmake . -DRUN_IN_PLACE=1
 $ make -j2
+
+or make a final version:
+$ cmake .
+$ make
 
 Run it:
 $ cd bin
@@ -249,28 +252,28 @@ Compiling on Windows:<br/>
 	- Make sure the configuration is as follows
 	  (note that the versions may differ for you):
 	-----------------
-	  BUILD_CLIENT                         [X]
-	  BUILD_SERVER                       [  ]
-	  CMAKE_BUILD_TYPE             Release
-	  CMAKE_INSTALL_PREFIX     DIR/minetest-install
-	  IRRLICHT_SOURCE_DIR       DIR/irrlicht-1.7.1
-	  RUN_IN_PLACE                        [X]
-	  WARN_ALL                                 [  ]
-	  ZLIB_DLL                                    DIR/zlib125dll/dll32/zlibwapi.dll
-	  ZLIB_INCLUDE_DIR                 DIR/zlib-1.2.5
-	  ZLIB_LIBRARIES                       DIR/zlib125dll/dll32/zlibwapi.lib
- 	  LIBVORBIS_INCLUDE_DIR    DIR/libvorbis-1.3.3/include
-	  LIBVORBIS_LIBRARIES           DIR/libvorbis.dll
-          LIBVORBISFILE_INCLUDE_DIR    DIR/libvorbis-1.3.3/include
-          LIBVORBISFILE_LIBRARIES           DIR/libvorbisfile.dll
-          LIBOGG_INCLUDE_DIR          DIR/libogg-1.3.0/include
-          LIBOGG_LIBRARIES                DIR/libogg.dll
-	  GETTEXT_BIN_DIR                  DIR/gettext/bin
-	  GETTEXT_INCLUDE_DIR       DIR/gettext/include
-	  GETTEXT_LIBRARIES             DIR/gettext/lib/intl.lib
-	  GETTEXT_MSGFMT                 DIR/gettext/bin/msgfmt
-          OPENAL_INCLUDE_DIR=C:\Program Files (x86)\OpenAL\include
-          OPENAL_LIBRARIES=C:\Program Files (x86)\OpenAL\lib\OpenAL32.lib
+	  BUILD_CLIENT                         [X]<br/>
+	  BUILD_SERVER                       [  ]<br/>
+	  CMAKE_BUILD_TYPE             Release<br/>
+	  CMAKE_INSTALL_PREFIX     DIR/minetest-install<br/>
+	  IRRLICHT_SOURCE_DIR       DIR/irrlicht-1.7.1<br/>
+	  RUN_IN_PLACE                        [X]<br/>
+	  WARN_ALL                                 [  ]<br/>
+	  ZLIB_DLL                                    DIR/zlib125dll/dll32/zlibwapi.dll<br/>
+	  ZLIB_INCLUDE_DIR                 DIR/zlib-1.2.5<br/>
+	  ZLIB_LIBRARIES                       DIR/zlib125dll/dll32/zlibwapi.lib<br/>
+ 	  LIBVORBIS_INCLUDE_DIR    DIR/libvorbis-1.3.3/include<br/>
+	  LIBVORBIS_LIBRARIES           DIR/libvorbis.dll<br/>
+          LIBVORBISFILE_INCLUDE_DIR    DIR/libvorbis-1.3.3/include<br/>
+          LIBVORBISFILE_LIBRARIES           DIR/libvorbisfile.dll<br/>
+          LIBOGG_INCLUDE_DIR          DIR/libogg-1.3.0/include<br/>
+          LIBOGG_LIBRARIES                DIR/libogg.dll<br/>
+	  GETTEXT_BIN_DIR                  DIR/gettext/bin<br/>
+	  GETTEXT_INCLUDE_DIR       DIR/gettext/include<br/>
+	  GETTEXT_LIBRARIES             DIR/gettext/lib/intl.lib<br/>
+	  GETTEXT_MSGFMT                 DIR/gettext/bin/msgfmt<br/>
+          OPENAL_INCLUDE_DIR=C:\Program Files (x86)\OpenAL\include<br/>
+          OPENAL_LIBRARIES=C:\Program Files (x86)\OpenAL\lib\OpenAL32.lib<br/>
 	-----------------
 	- Hit "Configure"
 	- Hit "Configure" once again 8)
